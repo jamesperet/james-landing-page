@@ -288,15 +288,18 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
+    cssmin: {
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/styles/main.css': [
+            '.tmp/styles/{,*/}*.css'
+          ],
+          '<%= yeoman.dist %>/styles/styles.css': [
+            '.tmp/styles/{,*/}*.css'
+          ]
+        }
+      }
+    },
     // uglify: {
     //   dist: {
     //     files: {
@@ -430,6 +433,22 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
+    },
+    'sftp-deploy': {
+      build: {
+        auth: {
+          host: '162.243.124.54',
+          port: 22,
+          authKey: 'key1'
+        },
+        cache: 'sftpCache.json',
+        src: 'dist',
+        dest: '/var/www/jamesperet-landing-page/public_html/',
+        exclusions: ['/dist/**/.DS_Store', '/dist/**/Thumbs.db', 'dist/tmp'],
+        serverSep: '/',
+        concurrency: 4,
+        progress: true
+      }
     },
 
     // Test settings

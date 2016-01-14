@@ -1,0 +1,41 @@
+body {
+  background-color: #1D1F21;
+}
+
+.center-div
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 800px;
+  height: 350px;
+  text-align: center;
+  color: white;
+}
+
+.link-list {
+  margin-top: 40px;
+  color: white;
+  text-align: center;
+  font-family: helvetica;
+  .btn-link {
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
+.text {
+  font-size: 1.4em;
+  font-family: helvetica;
+  a {
+    color: #979797;
+    text-decoration: none;
+  }
+  a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+}

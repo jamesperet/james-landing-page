@@ -14,7 +14,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'ngFx'
+    'ngFx',
+    'analytics.mixpanel'
   ])
 
   .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($stateProvider, $urlRouterProvider, $httpProvider) {
@@ -42,4 +43,8 @@ angular
     $urlRouterProvider.otherwise("/");
 
 
+  }])
+
+  .config(['$mixpanelProvider', function($mixpanelProvider) {
+      $mixpanelProvider.apiKey('118b90241623134a3468019b0917b85b'); // your token is different than your API key
   }]);

@@ -6,6 +6,26 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://jamesperet.com/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://jamesperet.com/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://jamesperet.com/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://jamesperet.com/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="http://jamesperet.com/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://jamesperet.com/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://jamesperet.com/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://jamesperet.com/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="http://jamesperet.com/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="http://jamesperet.com/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="http://jamesperet.com/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="http://jamesperet.com/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="http://jamesperet.com/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="James Peret Landing Page"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="http://jamesperet.commstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="http://jamesperet.commstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="http://jamesperet.commstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="http://jamesperet.commstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="http://jamesperet.commstile-310x310.png" />
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
@@ -32,9 +52,9 @@
         <div class="container-fluid link-list">
           <div class="row-fluid">
             <div class="col-sm-12 fx-fade-down fx-easing-sine fx-speed-800" ng-show="menuAnimationStart">
-              <a href="http://blog.j1x.co" class="btn btn-link btn-lg">Blog</a> |
+              <a href="http://blog.j1x.co" class="btn btn-link btn-lg" ng-click="track('Blog view')" target="_blank">Blog</a> |
               <a ui-sref="now" class="btn btn-link btn-lg" ui-sref-active="active">Now</a> |
-              <a href="http://registry.jsonresume.org/jamesperet" class="btn btn-link btn-lg">Resume</a>
+              <a href="http://registry.jsonresume.org/jamesperet" class="btn btn-link btn-lg" ng-click="track('Resume view')" target="_blank">Resume</a>
             </div>
           </div>
         </div>
@@ -50,7 +70,7 @@
        r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
        }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
+       ga('create', 'UA-4959543-2');
        ga('send', 'pageview');
     </script>
 
@@ -65,6 +85,8 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/gsap/src/uncompressed/TweenMax.js"></script>
     <script src="bower_components/ngFx/dist/ngFx.js"></script>
+    <script src="bower_components/mixpanel/mixpanel-jslib-snippet.js"></script>
+    <script src="bower_components/angular-mixpanel/src/angular-mixpanel.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

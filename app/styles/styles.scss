@@ -34,6 +34,10 @@ body {
   }
 }
 
+.now {
+  margin-top: 40px;
+}
+
 .text {
   font-size: 1.4em;
   font-family: helvetica;
@@ -44,5 +48,60 @@ body {
   a:hover {
     color: white;
     text-decoration: underline;
+  }
+}
+
+@media (max-width: 47.9em) {
+  html {
+    height: 130%;
+  }
+  .logo {
+    padding-top: 35px;
+    width: 600px;
+  }
+}
+
+
+
+@media (max-width: 33.9em) {
+  .center-div {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 230px;
+    text-align: center;
+    color: white;
+  }
+  .logo {
+    padding-top: 35px;
+    width: 300px;
+  }
+  .link-list {
+    margin-top: 20px;
+  }
+  .text {
+    font-size: 1.1em;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .btn-lg, .btn-group-lg > .btn {
+    font-size: 12px;
+  }
+  .now {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 490px) {
+  html {
+    height: 150%;
+  }
+  .logo {
+    padding-top: 15px;
+    width: 300px;
   }
 }

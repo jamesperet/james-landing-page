@@ -1,7 +1,6 @@
-# landing-page
+# James Peret Landing Page
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.12.1.
+Responsive landing page for [jamesperet.com](http://jamesperet.com) and [jamesperet.com.br](http://jamesperet.com.br). Built with AngularJS.
 
 ## Build & development
 

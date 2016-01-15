@@ -8,7 +8,7 @@
  * Controller of the landingPageApp
  */
 angular.module('landingPageApp')
-  .controller('NowCtrl', ['$window', function ($window) {
+  .controller('NowCtrl', ['$window', '$scope', '$timeout', function ($window, $scope, $timeout) {
     var lang = $window.navigator.language || $window.navigator.userLanguage;
     console.log(lang);
     if (lang === 'pt-BR') {
@@ -16,5 +16,10 @@ angular.module('landingPageApp')
     } else {
       console.log("language is english");
     }
-    console.log("Showing page NOW");
+
+    $scope.textAnimationStart = false;
+    $timeout(function(){
+      $scope.textAnimationStart = true;
+    }, 1000);
+
   }]);

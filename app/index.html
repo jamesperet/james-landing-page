@@ -26,7 +26,22 @@
     <div id="stars"></div>
     <div id="stars2"></div>
 
-    <div ui-view></div>
+    <div ng-controller="NavCtrl as nav">
+      <div class="center-div">
+        <a ui-sref="main"><img ng-show="logoAnimationStart" src="images/jamesperet-logo-white.png" class="fx-fade-down fx-easing-sine fx-speed-800"></a>
+        <div class="container-fluid link-list">
+          <div class="row-fluid">
+            <div class="col-sm-12 fx-fade-down fx-easing-sine fx-speed-800" ng-show="menuAnimationStart">
+              <a href="http://blog.j1x.co" class="btn btn-link btn-lg">Blog</a> |
+              <a ui-sref="now" class="btn btn-link btn-lg" ui-sref-active="active">Now</a> |
+              <a href="http://registry.jsonresume.org/jamesperet" class="btn btn-link btn-lg">Resume</a>
+            </div>
+          </div>
+        </div>
+        <div ui-view></div>
+      </div>
+    </div>
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -48,11 +63,14 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+    <script src="bower_components/ngFx/dist/ngFx.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/nav.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/now.js"></script>
         <!-- endbuild -->

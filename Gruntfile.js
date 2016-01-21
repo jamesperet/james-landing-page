@@ -490,6 +490,11 @@ module.exports = function (grunt) {
     'karma'
   ]);
 
+  grunt.registerTask('publish', [
+    'build',
+    'sftp-deploy'
+  ]);
+
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
